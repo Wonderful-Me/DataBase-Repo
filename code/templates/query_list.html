@@ -1,0 +1,150 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container">
+
+    <div style="margin-bottom: 10px">
+
+        <div style="float: right;width: 400px;">
+            <form method="post">
+
+            </form>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+            <b> Teacher Basic Infomation </b>
+        </div>
+
+        <!-- Table -->
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Teacher_ID</th>
+                <th>Teacher_Name</th>
+                <th>Sex</th>
+                <th>Title</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for obj in data_list %}
+            <tr>
+                <td>{{ obj.Teacher_ID }}</td>
+                <td>{{ obj.Teacher_name }}</td>
+                <td>{{ obj.sex }}</td>
+                <td>{{ obj.title }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+            <b> Course Teaching Infomation </b>
+        </div>
+
+        <!-- Course Table -->
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Course_ID</th>
+                <th>Course_Name</th>
+                <th>Course_Hour</th>
+                <th>Year</th>
+                <th>Semester</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for obj in data_list1 %}
+            <tr>
+                <td>{{ obj.Course_ID }}</td>
+                <td>{{ obj.Course_name }}</td>
+                <td>{{ obj.teach_hour }}</td>
+                <td>{{ obj.year }}</td>
+                <td>{{ obj.semester }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+            <b> Publication Infomation </b>
+        </div>
+
+        <!-- Paper Table -->
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Paper_Name</th>
+                <th>Paper_src</th>
+                <th>Address_Date</th>
+                <th>Level</th>
+                <th>Pub_Rank</th>
+                <th>Is_Cor_Author</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for obj in data_list2 %}
+            <tr>
+                <td>{{ obj.Paper_name }}</td>
+                <td>{{ obj.Paper_src }}</td>
+                <td>{{ obj.address_date }}</td>
+                <td>{{ obj.level }}</td>
+                <td>{{ obj.Pub_Rank }}</td>
+                <td>{{ obj.coauth }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+            <b> Project Incharge Infomation </b>
+        </div>
+
+        <!-- Table -->
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Project_name</th>
+                <th>Project_src</th>
+                <th>Project_type</th>
+                <th>start_year</th>
+                <th>end_year</th>
+                <th>Total_funding</th>
+                <th>Incharge_funding</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for obj in data_list3 %}
+            <tr>
+                <td>{{ obj.Project_name }}</td>
+                <td>{{ obj.Project_src }}</td>
+                <td>{{ obj.Project_type }}</td>
+                <td>{{ obj.start_year }}</td>
+                <td>{{ obj.end_year }}</td>
+                <td>{{ obj.funding }}</td>
+                <td>{{ obj.Ifunding }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+{% endblock %}

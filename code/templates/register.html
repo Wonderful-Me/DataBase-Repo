@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>register</title>
+        <link rel="stylesheet" href="/static/plugins/bootstrap-3.4.1/css/bootstrap.css">
+        <script src="/static/js/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js"></script>
+        <script src="/static/plugins/bootstrap-3.4.1/js/bootstrap.js"></script>
+        <style>
+            .account {
+                width: 500px;
+                border: 1px solid #dddddd;
+                border-radius: 5px;
+                box-shadow: 5px 5px 20px #aaa;
+
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 100px;
+                padding: 20px 40px;
+                background: #F8F8F8;
+            }
+
+            .account h2 {
+                margin-top: 10px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css"/>
+    <body>
+        <div class="account">
+
+            <h2 style="font-size:3rem;"><b>Register</b></h2>
+
+            <div class="panel-body">
+                <form method="post">
+
+                    <div class="form-group" style="font-size:2.5rem;">
+                        <label>User_Name</label>
+                        <input type="text" class="form-control" placeholder="User_Name" name="User_Name"/>
+                    </div>
+
+                    <div id="error" style="font-size:1.5rem;"></div>
+                    <script>
+                        const error_html = "<div class=\"alert alert-danger alert-dismissible\" role=\"alert\">\n" +
+                            "            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span\n" +
+                            "                    aria-hidden=\"true\">&times;</span></button>\n" +
+                            "            <strong>Error!</strong> {{error}} " +
+                            "        </div>";
+                        const error = '{{error}}';
+                        if (error)
+                            document.getElementById('error').innerHTML = error_html;
+                    </script>
+
+                    <div class="form-group" style="font-size:2.5rem;">
+                        <label>User_Password</label>
+                        <input type="text" class="form-control" placeholder="User_Password" name="User_Password"/>
+                    </div>
+
+                    <button type="submit" class="btn btn-success">submit</button>
+                </form>
+            </div>
+
+        </div>
+        <script src="/static/js/jquery-3.6.0.min.js"></script>
+        <script src="/static/plugins/bootstrap-3.4.1/js/bootstrap.js"></script>
+    </body>
+</html>

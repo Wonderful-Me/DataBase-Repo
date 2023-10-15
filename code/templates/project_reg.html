@@ -1,0 +1,90 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"> Project Registration </h3>
+        </div>
+        <div class="panel-body">
+            <form method="post">
+
+                <div class="form-group">
+                    <label>Project_ID</label>
+                    <input type="text" class="form-control" placeholder="Project_ID" name="Project_ID"/>
+                </div>
+
+                <div id="error"></div>
+                <script>
+                    const error_html = "<div class=\"alert alert-danger alert-dismissible\" role=\"alert\">\n" +
+                        "            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span\n" +
+                        "                    aria-hidden=\"true\">&times;</span></button>\n" +
+                        "            <strong>Error!</strong> {{error}} " +
+                        "        </div>";
+                    const error = '{{error}}';
+                    if (error)
+                        document.getElementById('error').innerHTML = error_html;
+                </script>
+
+                <div class="form-group">
+                    <label>Project_name</label>
+                    <input type="text" class="form-control" placeholder="Project_name" name="Project_name"/>
+                </div>
+
+                <div id="error1"></div>
+                <script>
+                    const error1_html = "<div class=\"alert alert-danger alert-dismissible\" role=\"alert\">\n" +
+                        "            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span\n" +
+                        "                    aria-hidden=\"true\">&times;</span></button>\n" +
+                        "            <strong>Error!</strong> {{error1}} " +
+                        "        </div>";
+                    const error1 = '{{error1}}';
+                    if (error1)
+                        document.getElementById('error1').innerHTML = error1_html;
+                </script>
+
+                <div class="form-group">
+                    <label>Project_src</label>
+                    <input type="text" class="form-control" placeholder="Project_src" name="Project_src"/>
+                </div>                
+                
+                <div id="error2"></div>
+                <script>
+                    const error2_html = "<div class=\"alert alert-danger alert-dismissible\" role=\"alert\">\n" +
+                        "            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span\n" +
+                        "                    aria-hidden=\"true\">&times;</span></button>\n" +
+                        "            <strong>Error!</strong> {{error2}} " +
+                        "        </div>";
+                    const error2 = '{{error2}}';
+                    if (error2)
+                        document.getElementById('error2').innerHTML = error2_html;
+                </script>
+
+                <div class="form-group">
+                    <label>Project_type ( 1 ~ 5 )</label>
+                    <input type="text" class="form-control" placeholder="Project_type" name="Project_type"/>
+                </div>
+                
+                <div class="form-group">
+                    <label>Funding</label>
+                    <input type="text" class="form-control" placeholder="funding" name="funding"/>
+                </div>
+
+                <div class="form-group">
+                    <label>Start_year</label>
+                    <input type="text" class="form-control" placeholder="Start_year" name="start_year"/>
+                </div>
+
+                <div class="form-group">
+                    <label>End_year</label>
+                    <input type="text" class="form-control" placeholder="End_year" name="end_year"/>
+                </div>
+
+                <button type="submit" class="btn btn-success">submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

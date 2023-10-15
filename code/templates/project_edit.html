@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"> Update Project Information </h3>
+        </div>
+        <div class="panel-body">
+            <form method="post">
+
+                <div class="form-group">
+                    <label>New_Project_name</label>
+                    <input type="text" class="form-control" placeholder="New_Project_name" name="Project_name"/>
+                </div>
+
+                <div class="form-group">
+                    <label>New_Project_src</label>
+                    <input type="text" class="form-control" placeholder="New_Project_src" name="Project_src"/>
+                </div>
+
+                <div class="form-group">
+                    <label>New_Project_type</label>
+                    <input type="text" class="form-control" placeholder="New_Project_type" name="Project_type"/>
+                </div>
+
+                <div class="form-group">
+                    <label>New_funding</label>
+                    <input type="text" class="form-control" placeholder="New_funding" name="funding"/>
+                </div>
+
+                <div class="form-group">
+                    <label>New_start_year</label>
+                    <input type="text" class="form-control" placeholder="New_start_year" name="start_year"/>
+                </div>
+
+                <div class="form-group">
+                    <label>New_end_year</label>
+                    <input type="text" class="form-control" placeholder="New_end_year" name="end_year"/>
+                </div>
+
+                <button type="submit" class="btn btn-success">submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

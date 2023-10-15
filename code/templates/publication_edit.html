@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"> Update Publication Information </h3>
+        </div>
+        <div class="panel-body">
+            <form method="post">
+
+                <div class="form-group">
+                    <label>New_Paper_name</label>
+                    <input type="text" class="form-control" placeholder="New_Paper_name" name="Paper_name"/>
+                </div>
+
+                <div class="form-group">
+                    <label>New_Paper_src</label>
+                    <input type="text" class="form-control" placeholder="New_Paper_src" name="Paper_src"/>
+                </div>
+
+                <div class="form-group">
+                    <label>New_Address_date</label>
+                    <input type="text" class="form-control" placeholder="New_address_date" name="address_date"/>
+                </div>
+
+
+                <div class="form-group">
+                    <label>New_Paper_type</label>
+                    <input type="text" class="form-control" placeholder="New_Paper_type" name="Paper_type"/>
+                </div>
+
+                <div class="form-group">
+                    <label>New_Paper_level</label>
+                    <input type="text" class="form-control" placeholder="New_Paper_level" name="level"/>
+                </div>
+
+                <button type="submit" class="btn btn-success">submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

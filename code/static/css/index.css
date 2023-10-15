@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@import 'https://fonts.googleapis.com/css?family=Noto+Sans';
+	
+	body {
+		font: 32px/48px 'Noto Sans', sans-serif;
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+		padding: 0;
+		margin: 0;
+		background: -moz-linear-gradient(-45deg, #cdffef 0, #a6c1dd 25%, #9ddcc2 50%, #c2f2a6 75%, #c198c3 100%);
+		background: -webkit-linear-gradient(-45deg, #f5b6ff 0, #ffe7a4 25%, #a2f9dd 50%, #ecffa1 75%, #adfbd7 100%);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+	

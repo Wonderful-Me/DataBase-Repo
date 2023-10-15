@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>login</title>
+        <link rel="stylesheet" href="/static/plugins/bootstrap-3.4.1/css/bootstrap.css">
+        <style>
+            .account {
+                width: 400px;
+                border: 1px solid #dddddd;
+                border-radius: 5px;
+                box-shadow: 5px 5px 20px #aaa;
+
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 150px;
+                padding: 20px 40px;
+                background: #F8F8F8;
+            }
+
+            .account h2 {
+                margin-top: 10px;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css"/>
+    <body>
+        <script src="/static/js/jquery-3.6.0.min.js"></script>
+        <script src="/static/plugins/bootstrap-3.4.1/js/bootstrap.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <div class="account">
+            <h2 style="font-size:3rem;"><b>Login</b></h2>
+            <form method="post">
+                <div class="form-group" style="font-size:2.5rem;">
+                    <label for="User_Name">User_Name</label>
+                    <input type="text" class="form-control" id="User_Name" placeholder="User_Name" name="User_Name">
+                </div>
+
+                <div id="user_not_exist" style="font-size:1.5rem;"></div>
+                <script>
+                    const user_not_exist_html = "<div class=\"alert alert-danger alert-dismissible\" role=\"alert\">\n" +
+                        "            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span\n" +
+                        "                    aria-hidden=\"true\">&times;</span></button>\n" +
+                        "            <strong>Error!</strong> {{user_not_exist}} " +
+                        "        </div>";
+                    const user_not_exist = '{{user_not_exist}}';
+                    if (user_not_exist)
+                        document.getElementById('user_not_exist').innerHTML = user_not_exist_html;
+                </script>
+
+                <div class="form-group" style="font-size:2.5rem;">
+                    <label for="User_Password">User_Password</label>
+                    <input type="password" class="form-control" id="User_Password" placeholder="User_Password"
+                        name="User_Password">
+                </div>
+
+                <div id="wrong_pswd" style="font-size:1.5rem;"></div>
+                <script>
+                    const wrong_pswd_html = "<div class=\"alert alert-danger alert-dismissible\" role=\"alert\">\n" +
+                        "            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span\n" +
+                        "                    aria-hidden=\"true\">&times;</span></button>\n" +
+                        "            <strong>Error!</strong> {{wrong_pswd}} " +
+                        "        </div>";
+                    const wrong_pswd = '{{wrong_pswd}}';
+                    if (wrong_pswd)
+                        document.getElementById('wrong_pswd').innerHTML = wrong_pswd_html;
+                </script>
+
+                <input type="submit" value="Submit" class="btn btn-success">
+            </form>
+        </div>
+    </body>
+</html>
